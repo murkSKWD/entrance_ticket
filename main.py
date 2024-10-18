@@ -30,7 +30,20 @@ def main():
             country = input("Enter country: ")
             results = get_features_by_country(country)
             for feature in results:
-                print(f"{feature.id}: {feature.features} | country: {feature.country}")
+                print(f"id: {feature.id}| features: {feature.features}| country: {feature.country}\n")
+                print(f"id: {feature.id}| network: {feature.network}")
+                print(f"id: {feature.id}| mcc_mnc:  {feature.mcc_mnc}")
+                print(f"id: {feature.id}| vendor:  {feature.vendor}")
+                print(f"id: {feature.id}| vendor_product:  {feature.vendor_product}")
+                print(f"id: {feature.id}| necessary_information:  {feature.necessary_information}")
+                print(f"id: {feature.id}| primary_contact:  {feature.primary_contact}")
+                print(f"id: {feature.id}| additional_contact:  {feature.additional_contact}")
+                print(f"id: {feature.id}| eta_for_registration:  {feature.eta_for_registration}")
+                print(f"id: {feature.id}| registration_window:  {feature.registration_window}")
+                print(f"id: {feature.id}| am_to_confirm_notify:  {feature.am_to_confirm_notify}")
+                print(f"id: {feature.id}| fees_for_client:  {feature.fees_for_client}")
+                print(f"id: {feature.id}| fees_for_us:  {feature.fees_for_us}")
+                print(f"id: {feature.id}| necessary_tag:  {feature.necessary_tag}")
 
         # Удаление записи по id
         elif command == "delete":
