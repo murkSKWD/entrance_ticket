@@ -17,7 +17,7 @@ def get_db_session():
 
 # Функция для добавления записи
 def add_feature(data):
-    with SessionLocal() as session:  # Создаем сессию в рамках функции
+    with get_db_session() as session:
         new_feature = Feature(
             country=data['country'],
             network=data['network'],
@@ -42,13 +42,13 @@ def add_feature(data):
 
 # Функция для получения записи по стране
 def get_features_by_country(country_):
-    with SessionLocal() as session:  # Создаем сессию в рамках функции
+    with get_db_session() as session:
         results = session.query(Feature).filter(Feature.country.like(f"%{country_}%")).all()
         return results
 
 # Функция для удаления записи по ID
 def delete_feature_by_id(feature_id):
-    with SessionLocal() as session:  # Создаем сессию в рамках функции
+    with get_db_session() as session:
         feature = session.query(Feature).get(feature_id)
         if feature:
             session.delete(feature)
@@ -59,7 +59,7 @@ def delete_feature_by_id(feature_id):
 
 # Функция для редактирования флага актуальности записи
 def update_feature_active_status(feature_id, is_active):
-    with SessionLocal() as session:  # Создаем сессию в рамках функции
+    with get_db_session() as session:
         feature = session.query(Feature).get(feature_id)
         if feature:
             feature.is_active = is_active
