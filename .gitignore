@@ -1,5 +1,6 @@
 # Исключение виртуального окружения
 venv/
+data/
 
 # Python-specific ignores
 __pycache__/
