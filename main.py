@@ -30,7 +30,7 @@ def main():
             country = input("Enter country: ")
             results = get_features_by_country(country)
             for feature in results:
-                print(f"{feature.id}: {feature.features}")
+                print(f"{feature.id}: {feature.features} | country: {feature.country}")
 
         # Удаление записи по id
         elif command == "delete":
