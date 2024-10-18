@@ -1,7 +1,7 @@
 from dbOperations import add_feature, get_features_by_country, delete_feature_by_id, update_feature_active_status
 def main():
     while True:
-        command = input("Enter command (add, get, delete, update, pull, exit): ")
+        command = input("Enter command (add, get, delete, update, exit): ")
          
         # Ввод данных для новой записи
         if command == "add":
