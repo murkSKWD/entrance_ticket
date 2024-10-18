@@ -1,0 +1,12 @@
+# Исключение виртуального окружения
+venv/
+
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Ignore environment variables
+.env
